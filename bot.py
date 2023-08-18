@@ -29,5 +29,6 @@ while chat.is_alive():
         try:
             if c.author.name and c.message:
                 print(f"{c.datetime} [{c.author.name.encode('utf-8').decode()}]  {c.message.encode('utf-8').decode()}")
+                GrabURL(c.message.encode('utf-8').decode())
         except Exception as e:
             print("An error occurred:", e)
